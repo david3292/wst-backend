@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Cheques Posfechados Por Aprobar</title>
+</head>
+<body>
+
+	<div style="border: 2px solid #e66a15; border-radius: 8px;">
+		<div style="background: #e66a15; padding: 10px 20px 10px;">
+			<h3 layout:fragment="titulo" style="color: #FFF;">Cheques Posfechados Por Aprobar</h3>	
+		</div>
+		
+		<div style="padding: 20px;">			
+			<p>Estimado/a <span th:text="${nombreUsuario}">Pérez Sánchez Juan</span></p>
+			<p>Algunos cheques requieren de su revisión antes de ser procesados. Por favor, ingresar al WST para su autorización.</p>
+			<p>Dar click a continuación: <a th:href="${linkSistema}">Web Sales Tool</a></p>
+		<p>Atentamente,</p>
+		<p>WST-TUVAL</p>
+		
+		</div>
+	</div>
+
+</body>
+</html>

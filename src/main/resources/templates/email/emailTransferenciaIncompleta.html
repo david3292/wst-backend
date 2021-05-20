@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Transferencia Incompleta</title>
+</head>
+<body>
+
+	<div style="border: 2px solid #e66a15; border-radius: 8px;">
+		<div style="background: #e66a15; padding: 10px 20px 10px;">
+			<h3 layout:fragment="titulo" style="color: #FFF;">Transferencia Incompleta</h3>	
+		</div>
+		
+		<div style="padding: 20px;">			
+			<p>Estimado/a <span th:text="${nombreUsuario}">Pérez Sánchez Juan</span></p>
+			<p>Notificamos que la TRANSFERENCIA <strong><span th:text="${numeroTransferencia}">TRF-000001</span></strong> no se ingresó completamente, por lo tanto la RESERVA <strong><span th:text="${numeroReserva}">RCC-000001</span></strong>  fue <strong>ANULADA</strong>.</p>			
+			<p>Documento(s) asociados a la Cotización <strong><span th:text="${numeroCotizacion}">CCL-0000008548</span></strong></p>
+		<p>Atentamente,</p>
+		<p>WST-TUVAL</p>
+		
+		</div>
+	</div>
+
+</body>
+</html>

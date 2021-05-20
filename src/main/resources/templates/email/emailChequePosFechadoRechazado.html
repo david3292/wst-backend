@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Cheques Posfechados Rechazados</title>
+</head>
+<body>
+
+	<div style="border: 2px solid #e66a15; border-radius: 8px;">
+		<div style="background: #e66a15; padding: 10px 20px 10px;">
+			<h3 layout:fragment="titulo" style="color: #FFF;">Cheques Posfechados Rechazados</h3>	
+		</div>
+		
+		<div style="padding: 20px;">			
+			<p>Estimado/a <span th:text="${nombreUsuario}">Pérez Sánchez Juan</span></p>
+			<p>Los siguientes cheques fueron rechazados:</p>
+			<p><strong>Observación:</strong><span th:text="${observacion}">Clientes morosos</span></p>
+			
+			<table style="width: 70%; border-collapse: collapse; border-spacing: 0; margin-left:10px;">
+				<thead>
+					<tr>
+						<th style="text-align: left; line-height: 40px; border-bottom: 2px solid #e66a15; border-top: 2px solid #e66a15;">Cheque</th>
+						<th style="text-align: left; line-height: 40px; border-bottom: 2px solid #e66a15; border-top: 2px solid #e66a15;">Banco</th>
+						<th style="text-align: left; line-height: 40px; border-bottom: 2px solid #e66a15; border-top: 2px solid #e66a15;">Cliente</th>
+						<th style="text-align: right; line-height: 40px; border-bottom: 2px solid #e66a15; border-top: 2px solid #e66a15;">Valor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="chequeProcesado : ${chequesPosfechados}">
+						<td style="line-height: 30px;"><strong th:text="${chequeProcesado.numeroCheque}">22343432</strong></td>
+						<td style="line-height: 30px;"><strong th:text="${chequeProcesado.banco}">Banco Pichincha</strong></td>
+						<td style="line-height: 30px;"><strong th:text="${chequeProcesado.nombreCliente}">Perico de los Palotes</strong></td>
+						<td style="line-height: 30px; text-align: right;"><strong><span th:text="${chequeProcesado.monto}">$100.00</span></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<p>Dar click a continuación: <a th:href="${linkSistema}">Web Sales Tool</a></p>
+		<p>Atentamente,</p>
+		<p>WST-TUVAL</p>
+		
+		</div>
+	</div>
+
+</body>
+</html>

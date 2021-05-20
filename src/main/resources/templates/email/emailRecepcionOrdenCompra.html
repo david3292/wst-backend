@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Recepción Orden Compra</title>
+</head>
+<body>
+
+	<div style="border: 2px solid #e66a15; border-radius: 8px;">
+		<div style="background: #e66a15; padding: 10px 20px 10px;">
+			<h3 layout:fragment="titulo" style="color: #FFF;">Recepción Orden Compra</h3>	
+		</div>
+		
+		<div style="padding: 20px;">			
+			<p>Estimado/a <span th:text="${nombreUsuario}">Pérez Sánchez Juan</span></p>
+			<p>Se ha generado la RECEPCIÓN <strong><span th:text="${numeroRecepcion}">REC-00000048</span></strong> correspondiente a la ORDEN DE COMPRA <strong><span th:text="${ordenCompraNumero}">OC-00122548</span></strong>.</p>			
+			
+			<p>La Cotización <strong><span th:text="${numeroCotizacion}">CCL-0000008548</span></strong> ya dispone de stock para ser facturada.</p>
+		<p>Atentamente,</p>
+		<p>WST-TUVAL</p>
+		
+		</div>
+	</div>
+
+</body>
+</html>
